@@ -6,7 +6,8 @@ def home(request):
     return HttpResponse("🚀 Django App Deployed Successfully on Railway!")
 
 urlpatterns = [
+    path('', home),  
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
-    path('', home),  # 👈 Ye line add karo homepage ke liye
+    
 ]

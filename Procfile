@@ -1,1 +1,2 @@
-web: gunicorn mybackend.wsgi:application
+release: python manage.py collectstatic --noinput
+web: gunicorn mybackend.wsgi

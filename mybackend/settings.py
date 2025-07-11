@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
+
 import os
 from pathlib import Path
 
@@ -25,13 +26,10 @@ SECRET_KEY = 'django-insecure-7uek%u-7-1=@y%(ih1coui1_6!hf9$nliq0id+oggrp2)bmk0t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
 ALLOWED_HOSTS = [os.environ.get('RAILWAY_DOMAIN', '*')]
-=======
-ALLOWED_HOSTS = ['*']
->>>>>>> e795d9d72669441546a7440bceecce2c6bf32f1f
 
 CSRF_TRUSTED_ORIGINS = ['https://web-production-767c1.up.railway.app']
+
 
 # Application definition
 
@@ -58,7 +56,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 ROOT_URLCONF = 'mybackend.urls'
 
 TEMPLATES = [
@@ -94,6 +94,7 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -131,11 +132,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# CORS settings
 CORS_ALLOW_ALL_ORIGINS = True

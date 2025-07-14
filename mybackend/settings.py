@@ -28,7 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [os.environ.get('RAILWAY_DOMAIN', '*')]
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-767c1.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-767c1.up.railway.app']  # ✅ CORRECT
+
 
 
 # Application definition
@@ -140,6 +141,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+CORS_ALLOWED_ORIGINS = [
+    "https://web-production-767c1.up.railway.app",
+]
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True

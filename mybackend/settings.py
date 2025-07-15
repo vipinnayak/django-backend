@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [os.environ.get('RAILWAY_DOMAIN', '*')]
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-767c1.up.railway.app']  # ✅ CORRECT
+CSRF_TRUSTED_ORIGINS = ['https://web-production-767c1.up.railway.app'] 
 
 
 
